@@ -1,1 +1,7 @@
-# Hey I am Victor Korir
+# Data Scientist
+
+### Education
+Geodetic Engineering Masters
+### Work Experience
+
+### Projects
