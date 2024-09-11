@@ -3,9 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: Spatial Data Scientist
 ---
-
-# Spatial Data Scientist
 
 ## Technical Skills
 - R
