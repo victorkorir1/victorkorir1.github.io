@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 70px 100px 0 300px;
+}
+
+hr {
+    position: relative;
+    left: -270px;
+    width: calc(100% + 340px);
+}
+
+body h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+ul {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+p {
+    font-size: 17px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+a {
+    color: #ff9800; /* Same hover effect for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.description {
+    margin-top: 50px;
+    font-size: 17px;
+    line-height: 1.8;
+}
