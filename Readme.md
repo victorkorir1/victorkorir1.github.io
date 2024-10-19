@@ -2,8 +2,12 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
-title: Spatial Data Scientist
+# layout: page
+# title: Spatial Data Scientist
+
+title: About Me
+permalink: /about/
+layout: default
 ---
 
 ## Technical Skills
