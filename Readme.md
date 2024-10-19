@@ -5,7 +5,7 @@
 # layout: page
 # title: Spatial Data Scientist
 
-title: About Me
+title: About
 permalink: /about/
 layout: default
 ---

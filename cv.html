@@ -1,0 +1,40 @@
+---
+layout: default
+title: CV
+---
+
+<style>
+  .download-button {
+    display: inline-block;
+    background-color: #063442; /* Customize the background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+  }
+
+  .download-button:hover {
+    background-color: #abe9e9;
+  }
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+</style>
+<div>
+  <h1>Curriculum Vitae</h1>
+  <hr />
+  <p>Click the button below to download my CV:</p>
+
+  <a href="{{ 'images/Sample pdf document.pdf' | relative_url }}" class="download-button"
+    >Download CV
+  </a>
+</div>
