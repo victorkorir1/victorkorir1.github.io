@@ -1,6 +1,6 @@
 ---
-title: Publications
-permalink: /publications/
+title: About
+permalink: /about/
 ---
 
 <!DOCTYPE html>
@@ -8,13 +8,18 @@ permalink: /publications/
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Victor Korir</title>
+    <title>Victor Korir - CV</title>
     <link rel="stylesheet" href="css/main.css" />
-    <style type="text/css" media="screen">
+    <style>
+      /* body styles*/
+      body {
+        font-family: Arial, sans-serif;
+      }
+
       /* Header Styles */
       header {
         background-color: #063442;
-        padding: 10px;
+        padding: 10px 50px;
         height: 50px;
         border-radius: 5px;
         display: flex;
@@ -22,15 +27,6 @@ permalink: /publications/
         justify-content: end;
         max-width: 1000px;
         margin: 0 auto;
-      }
-
-      .nav-links {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
       }
 
       .home-link {
@@ -42,9 +38,16 @@ permalink: /publications/
         color: white;
       }
 
+      .nav-links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
       .nav-links li {
         display: inline;
-        margin-left: 20px;
       }
 
       .nav-links a {
@@ -128,22 +131,36 @@ permalink: /publications/
         }
       }
 
-      /**page styles * */
       .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
       }
 
-      .right-image {
-        width: 150px;
-        height: 150px;
-        margin-left: 20px;
-        object-fit: cover;
+      /* Button and CV Section Styles */
+      .download-button {
+        display: inline-block;
+        background-color: #063442;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+
+      .download-button:hover {
+        background-color: #abe9e9;
       }
 
       hr {
         margin-top: 30px;
+        margin-bottom: 50px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
       }
 
       /* footer styles */
@@ -233,7 +250,6 @@ permalink: /publications/
       }
     </script>
   </head>
-
   <body>
     <header>
       <a href="/" class="home-link">Victor Korir</a>
@@ -258,31 +274,156 @@ permalink: /publications/
         <a href="/cv/">CV</a>
       </div>
     </header>
+
     <div class="container">
-      <h1>Publications</h1>
-      <br />
+      <h2>Technical Skills</h2>
 
-      <hr />
-      <br />
+      <ul>
+        <li>R</li>
+        <li>Python</li>
+        <li>QGIS</li>
+        <li>ArcGIS</li>
+      </ul>
 
-      {% for post in site.posts %}
+      <h2>Education</h2>
 
-      <div class="publication">
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"
-            >{{ post.title }}</a
+      <ul>
+        <li>
+          <strong>M.S., Geodetic Engineering</strong> | The University of Bonn
+          (November 2022)
+        </li>
+        <li>
+          <strong
+            >B.S., Geomatic Engineering and Geospatial Information
+            Systems</strong
           >
-        </h2>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-        <img
-          src="path/to/your/image.jpg"
-          alt="Image description"
-          class="right-image"
-        />
-        <hr />
-      </div>
-      {% endfor %}
+          | Jomo Kenyatta University of Agriculture and Technology (November
+          2018)
+        </li>
+      </ul>
+
+      <h2>Work Experience</h2>
+
+      <h3>
+        Senior Research Associate-Data Science @ Alliance of Bioversity and
+        International Center for Tropical Agriculture (CIAT)
+      </h3>
+
+      <p><strong>July 2023 - Present</strong></p>
+
+      <ul>
+        <li>
+          Implemented data science analysis techniques, including machine
+          learning, to explore the correlation between climate, conflict, and
+          human security.
+        </li>
+        <li>
+          Supported backend spatial analysis for the Climate Security
+          Observatory (CSO), enhancing stakeholders’ preparedness for climate
+          security risks.
+          <a href="https://github.com/"
+            >View contributions in the GitHub repository</a
+          >.
+        </li>
+        <li>
+          Collaborated with government ministries and regional blocs to
+          influence the development of national and regional policies on climate
+          change and human security.
+        </li>
+        <ul>
+          <li>
+            Notable contributions: IGAD regional strategy on climate security
+            and Kenya National Climate Change Action Plan (NCCAP) 2023-2027.
+          </li>
+        </ul>
+        <li>
+          Participated in fundraising by assisting in the preparation of grant
+          proposals and concept notes.
+        </li>
+      </ul>
+
+      <h3>
+        Research Associate (Wissenschaftlicher Mitarbeiter) @ Center for Remote
+        Sensing of Land Surfaces, University of Bonn
+      </h3>
+
+      <p><strong>March 2022 - July 2023</strong></p>
+
+      <ul>
+        <li>
+          Conducted research to gather and organize information on Copernicus
+          datasets and services.
+        </li>
+        <li>
+          Established a network of contacts with potential Copernicus users
+          across various African nations.
+        </li>
+        <li>
+          Evaluated user needs for Copernicus through interviews, surveys, and
+          engagement at events like UN-Spider expert meetings.
+        </li>
+        <li>
+          Produced training resources, including online brochures, tutorials,
+          and video guides for Copernicus applications.
+          <a
+            href="https://www.zfl.uni-bonn.de/resources-1/training-module-handbook-contents/flood-module"
+            >View resources</a
+          >
+          and on the UN-SPIDER knowledge portal.
+        </li>
+      </ul>
+
+      <h2>Projects</h2>
+
+      <ul>
+        <li>
+          <strong>Data-Driven EEG Band Discovery with Decision Trees</strong>
+        </li>
+      </ul>
+
+      <h2>Publications</h2>
+
+      <ul>
+        <li>
+          Kenduiywo, B.; Mendez, A.; Liebig, T.; Belli, A.; Villa, V.;
+          Achicanoy, H.; Korir, V.; Chepngetich, B.; Pacillo, G.; Laderach, P.
+          (2023) Mapping climate insecurity hotspots: Enhancing climate peace
+          and security decision making in East Africa and greater Horn of
+          Africa.
+          <a href="https://hdl.handle.net/10568/134672">DOI: 10.10568/134672</a>
+        </li>
+        <li>
+          Bridging Climate Change and Human Mobility— Collective analysis for a
+          deeper understanding of climate mobility in the East and Horn of
+          Africa. IOM, Global.
+          <a href="https://global.understanding-climate-mobility.org"
+            >Link to publication</a
+          >
+        </li>
+        <li>
+          Korir, V., Forsch, A., Dehbi, Y., and Haunert, J.-H.: Visualizing the
+          Modal Split in Public Transportation Networks, Abstr. Int. Cartogr.
+          Assoc., 5, 89.
+          <a href="https://doi.org/10.5194/ica-abs-5-89-2022"
+            >DOI: 10.5194/ica-abs-5-89-2022</a
+          >
+        </li>
+      </ul>
+
+      <h2>Theses</h2>
+
+      <ul>
+        <li>
+          <strong>Master's Thesis</strong>: Land suitability analysis for
+          placement of hydrogen infrastructure, a MCDM approach: Case study of
+          ECOWAS nations, West Africa.
+        </li>
+        <li>
+          <strong>Bachelor's Thesis</strong>: Use of GIS and Remote Sensing
+          technologies for monitoring and forecasting fall armyworm (Spodoptera
+          frugiperda) infestation: Case study of Tranzoia County, Kenya.
+        </li>
+      </ul>
     </div>
 
     <footer class="site-footer h-card">
