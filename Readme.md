@@ -6,7 +6,6 @@
 # title: Spatial Data Scientist
 
 title: About
-permalink: /about/
 ---
 
 ## Technical Skills
