@@ -1,6 +1,6 @@
 ---
-permalink: /research/
-title: Research
+title: Publications
+permalink: /publications/
 ---
 
 <!DOCTYPE html>
@@ -128,26 +128,11 @@ title: Research
         }
       }
 
-      /** Research page styles * */
+      /**page styles * */
       .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
-      }
-
-      .research-header {
-        margin-top: 50px;
-      }
-
-      .research-section {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 20px;
-      }
-
-      .research-content {
-        flex: 1;
       }
 
       .right-image {
@@ -274,41 +259,32 @@ title: Research
       </div>
     </header>
     <div class="container">
-      <h1>Research</h1>
-      <p>
-        Research and teaching activities are focused on plant diversity and
-        vegetation ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda,
-        and Ethiopia). Some additional work has been carried out in Europe
-        (Germany) and South America.
-      </p>
+      <h1>Publications</h1>
+      <br />
 
       <hr />
+      <br />
 
-      <h2 class="research-header"><strong>Research Projects</strong></h2>
+      {% for post in site.posts %}
 
-      <div class="research-section">
-        <div class="research-content">
-          <h3>Future Rural Africa</h3>
-          <p>
-            <strong>Future Rural Africa</strong> – Future-making and
-            social-ecological transformation
-          </p>
-          <p>
-            Evaluating expectations and probabilities in future-making from
-            different perspectives, including social and natural sciences. One
-            of the focuses in the consortium is related to the importance of
-            invasive plants on the ecology and management of rangelands in
-            Kenya.
-          </p>
-        </div>
-
+      <div class="publication">
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"
+            >{{ post.title }}</a
+          >
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
         <img
-          src="images/VictorKorir.png"
-          alt="Future Rural Africa"
+          src="path/to/your/image.jpg"
+          alt="Image description"
           class="right-image"
         />
+        <hr />
       </div>
+      {% endfor %}
     </div>
+
     <footer class="site-footer h-card">
       <data class="u-url" href="/victorkorir1.github.io/"></data>
 

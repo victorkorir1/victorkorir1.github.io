@@ -1,43 +1,344 @@
 ---
-layout: default
 title: CV
 permalink: /cv/
 ---
 
-<style>
-  .download-button {
-    display: inline-block;
-    background-color: #063442; /* Customize the background color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding around the text */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    margin-top: 10px; /* Space above the button */
-    transition: background-color 0.3s; /* Transition for hover effect */
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Korir - CV</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      /* body styles*/
+      body {
+        font-family: Arial, sans-serif;
+      }
 
-  .download-button:hover {
-    background-color: #abe9e9;
-  }
+      /* Header Styles */
+      header {
+        background-color: #063442;
+        padding: 10px 50px;
+        height: 50px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-  hr {
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
+      .home-link {
+        margin-right: auto;
+        margin-left: 20px;
+        font: 1em sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-</style>
-<div>
-  <h1>Curriculum Vitae</h1>
-  <hr />
-  <p>Click the button below to download my CV:</p>
+      .nav-links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
 
-  <a
-    href="{{ 'images/Sample pdf document.pdf' | relative_url }}"
-    class="download-button"
-    >Download CV
-  </a>
-</div>
+      .nav-links li {
+        display: inline;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .nav-links a:hover {
+        background-color: #575757;
+        border-radius: 5px;
+      }
+
+      /* Hamburger Button Styles */
+      .hamburger {
+        display: none;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        font-size: 77px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .side-menu {
+        display: none;
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        /* Side Menu Styles */
+        .side-menu {
+          display: flex;
+          height: auto;
+          width: 0;
+          position: fixed;
+          top: 0;
+          right: 0;
+          background-color: #063442;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          align-items: center;
+          flex-direction: column;
+          padding-bottom: 30px;
+          z-index: 10;
+        }
+
+        .side-menu a {
+          padding: 10px 20px;
+          text-decoration: none;
+          font-size: 20px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+          background-color: #575757;
+          border-radius: 5px;
+        }
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Button and CV Section Styles */
+      .download-button {
+        display: inline-block;
+        background-color: #063442;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+
+      .download-button:hover {
+        background-color: #abe9e9;
+      }
+
+      hr {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* footer styles */
+      .site-footer {
+        border-top: 1px solid #e8e8e8;
+        padding: 30px 0;
+        background-color: #f9f9f9;
+        max-width: 1000px;
+        margin: 0 auto;
+        bottom: 0;
+      }
+
+      .footer-heading {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #063442;
+      }
+
+      .contact-list,
+      .social-media-list {
+        list-style: none;
+        margin-left: 0;
+        padding: 0;
+      }
+
+      .footer-col-wrapper {
+        font-size: 15px;
+        color: #828282;
+        margin-left: -15px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .footer-col {
+        margin-bottom: 15px;
+        padding-left: 15px;
+      }
+
+      .footer-col-1 {
+        flex: 1 1 35%;
+      }
+
+      .footer-col-2 {
+        flex: 1 1 20%;
+      }
+
+      .footer-col-3 {
+        flex: 1 1 45%;
+      }
+
+      .svg-icon {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      .username {
+        vertical-align: middle;
+      }
+
+      @media screen and (max-width: 800px) {
+        .footer-col-1,
+        .footer-col-2 {
+          flex: 1 1 50%;
+        }
+
+        .footer-col-3 {
+          flex: 1 1 100%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .footer-col {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+        var sideMenu = document.getElementById("side-menu");
+        if (sideMenu.style.width === "0px" || sideMenu.style.width === "") {
+          sideMenu.style.width = "250px";
+        } else {
+          sideMenu.style.width = "0";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="home-link">Victor Korir</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/research/">Research</a></li>
+          <li><a href="/cv/">CV</a></li>
+          <li><a href="/publications/">Publications</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <!-- Side menu for mobile -->
+      <div id="side-menu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()"
+          >&times;</a
+        >
+        <a href="/">Victor Korir</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/cv/">CV</a>
+        <a href="/publications/">Publications</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>Curriculum Vitae</h1>
+      <hr />
+      <p>Click the button below to download my CV:</p>
+
+      <a
+        href="{{ 'images/Sample pdf document.pdf' | relative_url }}"
+        class="download-button"
+        >Download CV
+      </a>
+    </div>
+
+    <footer class="site-footer h-card">
+      <data class="u-url" href="/victorkorir1.github.io/"></data>
+
+      <div class="wrapper">
+        <h2 class="footer-heading">Victor Korir</h2>
+
+        <div class="footer-col-wrapper">
+          <div class="footer-col footer-col-1">
+            <ul class="contact-list">
+              <li class="p-name">Victor Korir</li>
+              <li>
+                <a class="u-email" href="mailto:victorkipkirui45@gmail.com"
+                  >victorkipkirui45@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-col-2">
+            <ul class="social-media-list">
+              <li>
+                <a href="https://github.com/victorkorir1">
+                  <svg class="svg-icon">
+                    <use
+                      xlink:href="/victorkorir1.github.io/assets/minima-social-icons.svg#github"
+                    ></use>
+                  </svg>
+                  <span class="username">victorkorir1</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/victorkorir1">
+                  <svg class="svg-icon">
+                    <use
+                      xlink:href="/victorkorir1.github.io/assets/minima-social-icons.svg#twitter"
+                    ></use>
+                  </svg>
+                  <span class="username">victorkorir1</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-col-3">
+            <p>
+              I am a skilled Geomatic Engineering professional with a deep
+              passion for surveying, mapping, GIS analysis, location-based
+              services, and remote sensing image analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
